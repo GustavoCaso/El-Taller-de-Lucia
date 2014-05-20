@@ -1,43 +1,55 @@
 .container-fluid
   .home_image.text-center
-    = image_tag('home.jpg')
+    .main_box
+      .logo
+        = image_tag('big_logo.png')
+      .square
+        %h3 MADRID
+        .line
+        %p 2014
+    .scroll_down
+      %p scroll down
+      = image_tag('scroll_down.png')
   .servicios.text-center
     %h1 Servicios
     .small_logo
       = image_tag('small_logo.png')
 
     .row
+      .col-xs-3
+        %figure
+          = image_tag('eventos.jpg')
+          %figcaption
+            %h3 Eventos
+            %p Lorem ipsum...
+            = link_to "+", "#"
+      .col-xs-3
+        %figure
+          = image_tag('bodas.jpg')
+          %figcaption
+            %h3 Bodas
+            %p Lorem ipsum...
+            = link_to "+", "#"
+
+      .col-xs-3
+        %figure
+          = image_tag('coronas.jpg')
+          %figcaption
+            %h3 Coronas
+            %p Lorem ipsum...
+            = link_to "+", "#"
+      .col-xs-3
+        %figure
+          = image_tag('centros.jpg')
+          %figcaption
+            %h3 Centros
+            %p Lorem ipsum...
+            = link_to "+", "#"
+    .row
       .col-xs-12
-        %ul.services
-          %li
-            %figure
-              = image_tag('eventos.jpg')
-              %figcaption
-                %h3 Eventos
-                %p Lorem ipsum...
-                = link_to "+", "#"
-          %li
-            %figure
-              = image_tag('bodas.jpg')
-              %figcaption
-                %h3 Bodas
-                %p Lorem ipsum...
-                = link_to "+", "#"
-          %li
-            %figure
-              = image_tag('coronas.jpg')
-              %figcaption
-                %h3 Coronas
-                %p Lorem ipsum...
-                = link_to "+", "#"
-          %li
-            %figure
-              = image_tag('centros.jpg')
-              %figcaption
-                %h3 Centros
-                %p Lorem ipsum...
-                = link_to "+", "#"
+        .prensa
   .contact.text-center
     %h1 Contacta
     .small_logo
       = image_tag('small_logo.png')
+    .contact_image
