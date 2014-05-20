@@ -1,0 +1,43 @@
+.container-fluid
+  .home_image.text-center
+    = image_tag('home.jpg')
+  .servicios.text-center
+    %h1 Servicios
+    .small_logo
+      = image_tag('small_logo.png')
+
+    .row
+      .col-xs-12
+        %ul.services
+          %li
+            %figure
+              = image_tag('eventos.jpg')
+              %figcaption
+                %h3 Eventos
+                %p Lorem ipsum...
+                = link_to "+", "#"
+          %li
+            %figure
+              = image_tag('bodas.jpg')
+              %figcaption
+                %h3 Bodas
+                %p Lorem ipsum...
+                = link_to "+", "#"
+          %li
+            %figure
+              = image_tag('coronas.jpg')
+              %figcaption
+                %h3 Coronas
+                %p Lorem ipsum...
+                = link_to "+", "#"
+          %li
+            %figure
+              = image_tag('centros.jpg')
+              %figcaption
+                %h3 Centros
+                %p Lorem ipsum...
+                = link_to "+", "#"
+  .contact.text-center
+    %h1 Contacta
+    .small_logo
+      = image_tag('small_logo.png')
