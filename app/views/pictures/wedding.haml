@@ -1,5 +1,8 @@
 .container-fluid
-  %h1.text-center Bodas
+  %h1.text-center
+    Bodas
+  .small_logo.text-center
+    = image_tag('small_logo.png')
   .col-xs-12
     %ul.image-grid.clearfix
       - @pictures.each do |picture|
