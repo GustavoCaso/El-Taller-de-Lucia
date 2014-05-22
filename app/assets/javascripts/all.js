@@ -1,3 +1,8 @@
 $(document).ready(function(){
-  $("#layerslider").layerslider();
+  $("#layerslider").layerSlider({
+    skinsPath: 'assets/skins/',
+    skin: 'glass',
+    navButtons: false,
+    navStartStop: false
+  });
 });

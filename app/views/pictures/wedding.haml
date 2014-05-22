@@ -1,0 +1,11 @@
+.container-fluid
+  %h1.text-center Bodas
+  .col-xs-12
+    %ul.image-grid.clearfix
+      - @pictures.each do |picture|
+        %li
+          %figure
+            = image_tag(picture.foto.url(:medium))
+            %figcaption
+              %h3= picture.title
+              %p= picture.description

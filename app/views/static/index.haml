@@ -16,39 +16,46 @@
       = image_tag('small_logo.png')
 
     .row
-      .col-xs-3
-        %figure
-          = image_tag('eventos.jpg')
-          %figcaption
-            %h3 Eventos
-            %p Lorem ipsum...
-            = link_to "+", "#"
-      .col-xs-3
-        %figure
-          = image_tag('bodas.jpg')
-          %figcaption
-            %h3 Bodas
-            %p Lorem ipsum...
-            = link_to "+", "#"
+      .pictures.clearfix
+        .col-xs-3
+          %figure
+            = image_tag('eventos.jpg')
+            %figcaption
+              %h3 Eventos
+              %p Lorem ipsum...
+              = link_to "+", "#"
+        .col-xs-3
+          %figure
+            = image_tag('bodas.jpg')
+            %figcaption
+              %h3 Bodas
+              %p Lorem ipsum...
+              = link_to "+", wedding_pictures_path
 
-      .col-xs-3
-        %figure
-          = image_tag('coronas.jpg')
-          %figcaption
-            %h3 Coronas
-            %p Lorem ipsum...
-            = link_to "+", "#"
-      .col-xs-3
-        %figure
-          = image_tag('centros.jpg')
-          %figcaption
-            %h3 Centros
-            %p Lorem ipsum...
-            = link_to "+", "#"
+        .col-xs-3
+          %figure
+            = image_tag('coronas.jpg')
+            %figcaption
+              %h3 Coronas
+              %p Lorem ipsum...
+              = link_to "+", "#"
+        .col-xs-3
+          %figure
+            = image_tag('centros.jpg')
+            %figcaption
+              %h3 Centros
+              %p Lorem ipsum...
+              = link_to "+", "#"
     .row
       .col-xs-12
         .prensa
-          #layerslider{style:"width: 100%; height: 500px;"}
+          #layerslider{style:"width: 100%; height: 100px;"}
+            - @newsletters.each do |newsletter|
+              .ls-slide
+                .ls-l
+                  %h3.title
+                    = newsletter.title
+                  = link_to newsletter.text, newsletter.url, class: "content"
   .contact.text-center
     %h1 Contacta
     .small_logo
