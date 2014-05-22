@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap/bootstrap
 //= require turbolinks
-//= require_tree .
+//= require greensock
+//= require layerslider.transitions
+//= require layerslider.kreaturamedia.jquery
+//= require all
