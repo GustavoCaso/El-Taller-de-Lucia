@@ -1,5 +1,12 @@
 class NewslettersController < ApplicationController
 
+  before_action :require_login
+  before_action :set_newsletter, except:[:index, :new, :create]
+
+  def index
+    @newsletters = Newsletter.all
+  end
+
   def new
     @newsletter = Newsletter.new
   end
@@ -14,11 +21,9 @@ class NewslettersController < ApplicationController
   end
 
   def edit
-    @newsletter = Newsletter.find(params[:id])
   end
 
   def update
-    @newsletter = Newsletter.find(params[:id])
     if @newslleter.update(newsletter_params)
       redirect_to root_path, notice: "Prensa modificada correctamente"
     else
@@ -27,12 +32,16 @@ class NewslettersController < ApplicationController
   end
 
   def destroy
-    @newsletter = Newsletter.find(params[:id])
     @newsletter.destroy
     redirect_to root_path, notice: "Prensa borrada correctamente"
   end
 
 private
+
+  def set_newsletter
+    @newsletter = Newsletter.find(params[:id])
+  end
+
   def newsletter_params
     params.require(:newsletter).permit(:title, :text, :url)
   end

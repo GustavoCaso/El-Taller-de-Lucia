@@ -1,0 +1,27 @@
+.container
+  .row
+    .col-xs-12
+      %h1 Listado de Fotos
+
+      %table.table
+        %tr
+          %th Titulo
+          %th Descripcion
+          %th Categoria
+          %th Foto
+          %th Visible
+          %th
+
+        - @pictures.each do |picture|
+          %tr
+            %td= picture.title
+            %td= picture.description
+            %td= picture.category
+            %td= image_tag picture.foto.url(:thumb)
+            %td= picture.show
+            %td= link_to 'Editar', edit_picture_path(picture)
+
+
+      %br
+
+    = link_to 'Nueva Foto', new_picture_path

@@ -1,4 +1,16 @@
 .container-fluid
+  - if login?
+    .admin_menu.text-center
+      %ul.clearfix
+        %li
+          = link_to "Fotos", pictures_path
+        %li
+          = link_to "Prensa", newsletters_path
+        %li
+          = link_to "Usuarios", users_path
+        %li
+          = link_to "Desconectar", logout_path, method: :delete, data:{confirm: "Esta segura de querer desconectarte"}
+
   .home_image.text-center
     .main_box
       .logo
@@ -22,14 +34,14 @@
             = image_tag('eventos.jpg')
             %figcaption
               %h3 Eventos
-              %p Lorem ipsum...
+              %p Nos esforzamos para entregarle la mejor presentación en sus eventos
               = link_to "+", event_pictures_path
         .col-xs-3
           %figure
             = image_tag('bodas.jpg')
             %figcaption
               %h3 Bodas
-              %p Lorem ipsum...
+              %p Para que una boda sea perfecta hasta al más minimo detalle debe estar cuidado
               = link_to "+", wedding_pictures_path
 
         .col-xs-3
@@ -37,14 +49,14 @@
             = image_tag('coronas.jpg')
             %figcaption
               %h3 Coronas
-              %p Lorem ipsum...
+              %p Pequeños accesorios que daran una gran presencia en sus fiestas y reuniones
               = link_to "+", crown_pictures_path
         .col-xs-3
           %figure
             = image_tag('centros.jpg')
             %figcaption
               %h3 Centros
-              %p Lorem ipsum...
+              %p Cautive a sus invitados con adornos tan elegantes, que no querran hablar de otra cosa
               = link_to "+", center_pictures_path
     .row
       .col-xs-12

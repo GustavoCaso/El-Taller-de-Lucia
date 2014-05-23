@@ -1,19 +1,26 @@
 class PicturesController < ApplicationController
 
+  before_action :require_login, except:[:wedding,:crown, :event, :center]
+  before_action :set_picture, except:[:index, :new, :create, :wedding,:crown, :event, :center]
+
   def wedding
-    @pictures = Picture.where(category: "Bodas")
+    @pictures = Picture.where(category: "Bodas", show: true)
   end
 
   def crown
-    @pictures = Picture.where(category: "Coronas")
+    @pictures = Picture.where(category: "Coronas", show: true)
   end
 
   def event
-    @pictures = Picture.where(category: "Eventos")
+    @pictures = Picture.where(category: "Eventos", show: true)
   end
 
   def center
-    @pictures = Picture.where(category: "Centros" )
+    @pictures = Picture.where(category: "Centros", show: true )
+  end
+
+  def index
+    @pictures = Picture.all
   end
 
   def new
@@ -30,11 +37,10 @@ class PicturesController < ApplicationController
   end
 
   def edit
-    @picture = Picture.find(params[:id])
+
   end
 
   def update
-    @picture = Picture.find(params[:id])
     if @picture.update(picture_params)
       redirect_to root_path, notice: "Foto actualizada correctamente"
     else
@@ -43,6 +49,11 @@ class PicturesController < ApplicationController
   end
 
 private
+
+  def set_picture
+    @picture = Picture.find(params[:id])
+  end
+
   def picture_params
     params.require(:picture).permit(:title, :description, :category, :show, :foto)
   end

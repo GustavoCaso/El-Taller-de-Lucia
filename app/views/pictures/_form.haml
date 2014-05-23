@@ -1,4 +1,5 @@
 = form_for @picture do |f|
+  = render "shared/errors", object: @picture
   .field
     = f.label :title
     = f.text_field :title
@@ -10,9 +11,9 @@
     = f.select :category, Picture::CATEGORIES
   .field
     = f.label :foto
-    = f.file_field :foto  
+    = f.file_field :foto
   .field
-    = f.label :show
+    = f.label :show, "Visible"
     = f.check_box :show
   .action
     = f.submit "Guardar"
