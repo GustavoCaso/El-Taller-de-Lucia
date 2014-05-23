@@ -1,6 +1,40 @@
 .image-grid
   list-style: none
+  width: 95%
+  margin: 0 auto
   li
     float: left
-    width: 23%
     margin-right: 2%
+    margin-bottom: 2%
+    &:hover > figure > figcaption
+      bottom: 15px
+      opacity: 1
+    &:hover > figure::before
+      border-width: 10px
+      border-color: rgba(203,233,245,1)
+
+    > figure
+      position: relative
+      &::before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        background: transparent
+        border: 0px solid transparent
+        top: 0
+        left: 0
+        -webkit-transition: all 1s ease
+        -o-transition: all 1s ease
+        transition: all 1s ease
+      figcaption
+        text-align: center
+        position: absolute
+        bottom: -84px
+        width: 100%
+        opacity: 0
+        color: white
+        background: rgba(203,233,245,1)
+        -webkit-transition: all 1s ease
+        -o-transition: all 1s ease
+        transition: all 1s ease

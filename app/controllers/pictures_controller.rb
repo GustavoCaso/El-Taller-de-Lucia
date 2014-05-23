@@ -8,6 +8,14 @@ class PicturesController < ApplicationController
     @pictures = Picture.where(category: "Coronas")
   end
 
+  def event
+    @pictures = Picture.where(category: "Eventos")
+  end
+
+  def center
+    @pictures = Picture.where(category: "Centros" )
+  end
+
   def new
     @picture = Picture.new
   end
