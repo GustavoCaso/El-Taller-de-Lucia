@@ -23,10 +23,9 @@
       %p scroll down
       = image_tag('scroll_down.png')
   .servicios.text-center
-    %h1 Servicios
     .small_logo
       = image_tag('small_logo.png')
-
+    %h1.sub_title Servicios
     .row
       .pictures.clearfix
         .col-xs-3
@@ -69,7 +68,18 @@
                     = newsletter.title
                   = link_to newsletter.text, newsletter.url, class: "content"
   .contact.text-center
-    %h1 Contacta
     .small_logo
       = image_tag('small_logo.png')
+    %h1.sub_title Contacta
     .contact_image
+      .contact_info
+        %p Si quieres conocerme:
+        %p
+          %span.email
+            = image_tag("email.png")
+          Escribenos al
+          = mail_to " info@eltallerdelucia.es", "El Taller de Lucia"
+        %p
+          %span.phone
+            = image_tag("phone.png")
+          Llámanos al 661348190
