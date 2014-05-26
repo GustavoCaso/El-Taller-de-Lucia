@@ -10,6 +10,9 @@
 # Ignore local photos
 /public/system
 
+#Ignnore env Variables
+/config/env_variables.yml
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
