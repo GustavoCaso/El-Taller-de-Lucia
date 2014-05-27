@@ -24,7 +24,7 @@ class NewslettersController < ApplicationController
   end
 
   def update
-    if @newslleter.update(newsletter_params)
+    if @newsletter.update(newsletter_params)
       redirect_to root_path, notice: "Prensa modificada correctamente"
     else
       render :edit
