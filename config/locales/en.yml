@@ -18,6 +18,32 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  activerecord:
+      attributes:
+        picture:
+          title: "Titulo"
+          description: 'Descripción'
+        newsletter:
+          title: 'Titulo'
+          text: 'Texto'
+          url: 'Dirección web'
+      errors:
+        models:
+          picture:
+            attributes:
+              title:
+                blank: ": no puede estar en blanco"
+              description:
+                blank: ': no puede estar en blanco'
+              foto:
+                blank: ': no te olvides de subir una foto :-)'
+          newsletter:
+            attributes:
+              title:
+                blank: ": no puede estar en blanco"
+              text:
+                blank: ': no puede estar en blanco'
+              url:
+                blank: ': no puede estar en blanco'
+

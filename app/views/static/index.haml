@@ -1,19 +1,6 @@
 .container-fluid
   - if login?
-    .admin_menu.text-center
-      %ul.clearfix
-        %li
-          = link_to "Fotos", pictures_path
-        %li
-          = link_to "Prensa", newsletters_path
-        %li
-          = link_to "Usuarios", users_path
-        %li
-          = link_to "Desconectar", logout_path, method: :delete, data:{confirm: "Esta segura de querer desconectarte"}
-  - flash.each do |type, msg|
-    %p.text-center{class: type}
-      = msg
-
+    = render 'shared/admin_menu'
 
   .home_image.text-center
     .main_box
@@ -37,31 +24,27 @@
           %figure
             = image_tag('eventos.jpg')
             %figcaption
-              %h3 Eventos
+              %h3= link_to "Eventos", event_pictures_path
               %p Nos esforzamos para entregarle la mejor presentación en sus eventos
-              = link_to "+", event_pictures_path
         .col-xs-3
           %figure
             = image_tag('bodas.jpg')
             %figcaption
-              %h3 Bodas
+              %h3= link_to "Bodas", wedding_pictures_path
               %p Para que una boda sea perfecta hasta al más minimo detalle debe estar cuidado
-              = link_to "+", wedding_pictures_path
 
         .col-xs-3
           %figure
             = image_tag('coronas.jpg')
             %figcaption
-              %h3 Coronas
+              %h3= link_to "Coronas", crown_pictures_path
               %p Pequeños accesorios que daran una gran presencia en sus fiestas y reuniones
-              = link_to "+", crown_pictures_path
         .col-xs-3
           %figure
             = image_tag('centros.jpg')
             %figcaption
-              %h3 Centros
+              %h3= link_to "Centros", center_pictures_path
               %p Cautive a sus invitados con adornos tan elegantes, que no querran hablar de otra cosa
-              = link_to "+", center_pictures_path
     .row
       .col-xs-12
         .prensa
@@ -71,7 +54,19 @@
                 .ls-l
                   %h3.title
                     = newsletter.title
-                  = link_to newsletter.text, newsletter.url, class: "content"
+                  = link_to newsletter.text, newsletter.url, { class: "content",target: '_blank'}
+  .us.text-center
+    .small_logo
+      = image_tag('small_logo.png')
+    %h1.sub_title Nosotros
+    .relative-wrapper
+      .us_image
+        .us_info
+          %p Su fundadora, Lucía Navas, tras 4 años trabajando en el mundo de la comunicación y su formación floral en una escuela inglesa, apuesta por crear esta empresa dedicada a la decoración floral.
+          %p Una combinación perfecta para  ofrecer  la máxima creatividad y originalidad en sus creaciones, junto con una exquisita atención a sus clientes.
+          %p Asesoramos y decoramos con flores bodas especiales, eventos y empresas que quieran un toque diferente. Trabajamos la flor natural, seca y preservada.
+          %p En El Taller de Lucía creamos arreglos florales con encanto para momentos especiales ofreciendo un trato personalizado, cuidando al máximo cada detalle.
+          = image_tag('decorative_lines.png')
   .contact.text-center
     .small_logo
       = image_tag('small_logo.png')
@@ -89,3 +84,7 @@
             %span.phone
               = image_tag("phone.png")
             Llámanos al 661348190
+          .social-media
+            .facebook
+            %p Facebook
+

@@ -1,0 +1,10 @@
+.admin_menu.text-center
+  %ul.clearfix
+    %li
+      = link_to "Fotos", pictures_path
+    %li
+      = link_to "Prensa", newsletters_path
+    %li
+      = link_to "Usuarios", users_path
+    %li
+      = link_to "Desconectar", logout_path, method: :delete, data:{confirm: "Esta segura de querer desconectarte"}

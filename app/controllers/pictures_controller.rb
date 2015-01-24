@@ -30,7 +30,7 @@ class PicturesController < ApplicationController
   def create
     @picture = Picture.new(picture_params)
     if @picture.save
-      redirect_to root_path, notice: "Foto guardada correctamente"
+      redirect_to pictures_path, notice: "Foto guardada correctamente"
     else
       render :new
     end
@@ -42,7 +42,7 @@ class PicturesController < ApplicationController
 
   def update
     if @picture.update(picture_params)
-      redirect_to root_path, notice: "Foto actualizada correctamente"
+      redirect_to pictures_path, notice: "Foto actualizada correctamente"
     else
       render :edit
     end

@@ -14,7 +14,7 @@ class NewslettersController < ApplicationController
   def create
     @newsletter = Newsletter.new(newsletter_params)
     if @newsletter.save
-      redirect_to root_path, notice: "Prensa guardado correctamente"
+      redirect_to newsletters_path, notice: "Articulo de prensa guardado correctamente"
     else
       render :new
     end
@@ -25,7 +25,7 @@ class NewslettersController < ApplicationController
 
   def update
     if @newsletter.update(newsletter_params)
-      redirect_to root_path, notice: "Prensa modificada correctamente"
+      redirect_to newsletters_path, notice: "Articulo de prensa modificada correctamente"
     else
       render :edit
     end
@@ -33,7 +33,7 @@ class NewslettersController < ApplicationController
 
   def destroy
     @newsletter.destroy
-    redirect_to root_path, notice: "Prensa borrada correctamente"
+    redirect_to newsletters_path, notice: "Articulo de prensa borrada correctamente"
   end
 
 private

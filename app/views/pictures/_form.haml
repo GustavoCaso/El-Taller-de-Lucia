@@ -10,7 +10,7 @@
     = f.label :category
     = f.select :category, Picture::CATEGORIES
   .field
-    = f.label :foto
+    = f.label :foto,  @picture.foto.original_filename ? "Foto (#{@picture.foto.original_filename})" : 'Foto'
     = f.file_field :foto
   .field
     = f.label :show, "Visible"

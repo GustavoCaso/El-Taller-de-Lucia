@@ -1,0 +1,11 @@
+.container
+  .pull-right
+    = link_to 'Edit', edit_user_path(@user), class: "admin_link"
+    = link_to 'Back', users_path, class: "admin_link"
+
+  %p
+    %b Email:
+    = @user.email
+  %p
+    %b Password:
+    = @user.password

@@ -1,5 +1,6 @@
-
+$red_color: rgba(55,27,44,1)
 .admin_menu
+  padding-top: 20px
   ul
     list-style: none
     width: 267px
@@ -86,7 +87,7 @@
       &:hover > img
         opacity: .5
       &:hover > figcaption
-        width: 297px
+        bottom: 119px
         opacity: 1
       img
         -webkit-transition: all 0.5s ease-out
@@ -97,25 +98,24 @@
         padding: 5px 0px 0px 0px
         position: relative
         color: white
-        bottom: 119px
-        height: 119px
-        width: 0px
+        bottom: 0px
         opacity: 0
-        background: rgba(203,233,245,.6)
+        height: 119px
+        width: 297px
+        background: rgba(203,233,245,.3)
         -webkit-transition: all 1s ease-out
         -moz-transition: all 1s ease-out
         -o-transition: all 1s ease-out
         transition: all 1s ease-out
         h3
           margin-bottom: 0
+        p
+          color: $red_color
+          font-size: 1.2em
         a
-          display: inline-block
-          font-size: 24px
-          width: 15px
-          height: 15px
-          border: 1px solid grey
-          border-radius: 50%
-          line-height: 15px
+          color: $red_color
+          &:hover
+            border-bottom: 1px solid $red_color
   .prensa
     margin-top: 70px
     &::before
@@ -141,6 +141,29 @@
             margin-top: 0
           a
             font-size: 24px
+            color: #7D7E7E
+            &:hover
+              border-bottom: 1px solid #7D7E7E
+.us
+  margin-top: 60px
+  .us_image
+    width: 100%
+    height: 1100px
+    background: image-url("us.png") no-repeat center center fixed
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    border: 13px solid white
+    .us_info
+      position: relative
+      top: 30%
+      color: white
+      font-size: 24px
+      p
+        padding: 20px
+      img
+        width: 30%
 .contact
   margin-top: 60px
   .contact_image
@@ -173,3 +196,11 @@
         transition: bottom .5s ease
         &:hover
           bottom: 5px
+      .social-media
+        .facebook
+          background: image-url('social_sprite.png') no-repeat center center
+          background-position: -3% 124%
+          width: 36px
+          height: 36px
+          display: inline-block
+
