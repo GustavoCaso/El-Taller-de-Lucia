@@ -79,12 +79,16 @@
             %span.email
               = image_tag("email.png")
             Escríbenos al
-            = mail_to "info@eltallerdelucia.es", "El Taller de Lucia"
+            = mail_to "info@eltallerdelucia.es", "El Taller de Lucia", class: 'transition'
           %p
             %span.phone
               = image_tag("phone.png")
             Llámanos al 661348190
-          .social-media
-            .facebook
-            %p Facebook
+          .social-media.clearfix
+            .facebook.animated
+              %a{href:'Facebook.com/eltallerdelucia.es', target: '_blank'}
+                b
+            .instagram.animated
+              %a{href:'http://instagram.com/eltallerdelucia', target: '_blank'}
+                x
 

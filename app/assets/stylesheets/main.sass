@@ -1,4 +1,9 @@
 $red_color: rgba(55,27,44,1)
+.clearfix:after
+  content: ""
+  display: table
+  clear: both
+
 .admin_menu
   padding-top: 20px
   ul
@@ -183,10 +188,11 @@ $red_color: rgba(55,27,44,1)
       color: white
       text-align: left
       font-size: 24px
+      width: 22%
       .phone,.email
         display: inline-block
         width: 31px
-      a
+      a.transition
         color: white
         position: relative
         bottom: 0
@@ -197,10 +203,17 @@ $red_color: rgba(55,27,44,1)
         &:hover
           bottom: 5px
       .social-media
-        .facebook
-          background: image-url('social_sprite.png') no-repeat center center
-          background-position: -3% 124%
-          width: 36px
-          height: 36px
-          display: inline-block
+        font-family: 'socicon' !important
+        font-size: 2em
+        width: 50%
+        margin: 0 auto
+        .facebook,.instagram
+          position: relative
+          float: left
+          margin-right: 10%
+          a
+            color: white
+
+
+
 

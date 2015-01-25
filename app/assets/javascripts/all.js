@@ -5,4 +5,10 @@ $(document).ready(function(){
     navButtons: false,
     navStartStop: false
   });
+
+  $('.facebook, .instagram').hover( function(){
+      $(this).addClass('tada');
+  },function(){
+      $(this).removeClass('tada');
+  });
 });
