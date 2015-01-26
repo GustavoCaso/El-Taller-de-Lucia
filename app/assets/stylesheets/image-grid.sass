@@ -1,3 +1,4 @@
+$image-background: rgba(123,142,81,.7)
 .image-grid
   list-style: none
   width: 95%
@@ -11,7 +12,7 @@
       opacity: 1
     &:hover > figure::before
       border-width: 10px
-      border-color: rgba(203,233,245,1)
+      border-color: $image-background
 
     > figure
       position: relative
@@ -34,7 +35,7 @@
         width: 100%
         opacity: 0
         color: rgba(55,27,44,1)
-        background: rgba(203,233,245,1)
+        background: $image-background
         -webkit-transition: all 1s ease
         -o-transition: all 1s ease
         transition: all 1s ease

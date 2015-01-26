@@ -25,29 +25,33 @@
             = image_tag('eventos.jpg')
             %figcaption
               %h3= link_to "Eventos", event_pictures_path
-              %p Nos esforzamos para entregarle la mejor presentación en sus eventos
+              %p Nos encargamos de la decoración floral para que tu evento sea inolvidable.
         .col-xs-3
           %figure
             = image_tag('bodas.jpg')
             %figcaption
               %h3= link_to "Bodas", wedding_pictures_path
-              %p Para que una boda sea perfecta hasta al más minimo detalle debe estar cuidado
+              %p Diseñamos, te asesoramos y os ayudamos a definir el estilo para que tu boda sea única y especial.
 
         .col-xs-3
           %figure
             = image_tag('coronas.jpg')
             %figcaption
               %h3= link_to "Coronas", crown_pictures_path
-              %p Pequeños accesorios que daran una gran presencia en sus fiestas y reuniones
+              %p Realizamos coronas de flor natural y flores liofilizadas en distintos tamaños.
         .col-xs-3
           %figure
             = image_tag('centros.jpg')
             %figcaption
               %h3= link_to "Centros", center_pictures_path
-              %p Cautive a sus invitados con adornos tan elegantes, que no querran hablar de otra cosa
+              %p Creamos centros de flor natural, seca o liofilizada y también trabajamos con plantas de temporada.
+  .prensa.text-center
+    .small_logo
+      = image_tag('small_logo.png')
+    %h1.sub_title Prensa
     .row
       .col-xs-12
-        .prensa
+        .prensa_slider
           #layerslider{style:"width: 100%; height: 100px;"}
             - @newsletters.each do |newsletter|
               .ls-slide
@@ -74,21 +78,17 @@
     .relative-wrapper
       .contact_image
         .contact_info
-          %p Si quieres conocerme:
+          %p El Taller de Lucía trabaja por encargo ofreciendo todos los servicios de decoración floral para tu evento, boda o empresa.
           %p
-            %span.email
-              = image_tag("email.png")
-            Escríbenos al
+            Para ponerte en contacto con nosotros, pedir información o realizar tu pedido escríbenos un email a:
             = mail_to "info@eltallerdelucia.es", "El Taller de Lucia", class: 'transition'
           %p
-            %span.phone
-              = image_tag("phone.png")
-            Llámanos al 661348190
+            o llámanos a: 661348190
           .social-media.clearfix
             .facebook.animated
-              %a{href:'Facebook.com/eltallerdelucia.es', target: '_blank'}
+              %a{href:'https://Facebook.com/eltallerdelucia.es', target: '_blank'}
                 b
             .instagram.animated
-              %a{href:'http://instagram.com/eltallerdelucia', target: '_blank'}
+              %a{href:'https://instagram.com/eltallerdelucia', target: '_blank'}
                 x
 
