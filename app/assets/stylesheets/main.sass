@@ -69,8 +69,9 @@ body
   .scroll_down
     color: white
     position: absolute
-    top: 800px
+    top: 700px
     left: 48%
+    cursor: pointer
     p
       font-size: 20px
 
@@ -115,27 +116,32 @@ body
         -o-transition: all 1s ease-out
         transition: all 1s ease-out
         h3
+          margin-top: 10px
           margin-bottom: 0
         p
           color: $red_color
           font-size: 1.2em
+        p.small
+          padding: 4px
         a
           color: $red_color
           &:hover
             border-bottom: 1px solid $red_color
 .prensa
+  .sub_title
+    margin-bottom: 0
   .prensa_slider
     margin-top: 70px
     &::before
       content: "hello"
-      border-top: 1px solid orange
+      border-top: 1px solid grey
       width: 1000px
       color: transparent
       display: block
       margin: 0 auto
     &::after
       content: "hello"
-      border-top: 1px solid orange
+      border-top: 1px solid grey
       width: 800px
       color: transparent
       display: block
@@ -167,7 +173,7 @@ body
       position: relative
       top: 30%
       color: white
-      font-size: 24px
+      font-size: 20px
       p
         padding: 20px
       img
@@ -188,7 +194,7 @@ body
       position: relative
       top: 40%
       color: white
-      font-size: 24px
+      font-size: 20px
       p
         padding: 20px
       a.transition
