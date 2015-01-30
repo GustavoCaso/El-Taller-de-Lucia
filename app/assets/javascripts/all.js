@@ -2,7 +2,7 @@ $(document).ready(function(){
   //  To animate after cliking the scroll down button to the element minus the padding
   $('.scroll_down').on('click', function(){
     $('html, body').animate({
-        scrollTop: $('.servicios').offset().top - 40},
+        scrollTop: $('.us').offset().top - 40},
     'slow');
   }) ;
 
@@ -10,8 +10,8 @@ $(document).ready(function(){
   $("#layerslider").layerSlider({
     skinsPath: 'assets/skins/',
     skin: 'glass',
-    navButtons: false,
-    navStartStop: false
+    navPrevNext: true,
+    navButtons: true
   });
 
   $('.facebook, .instagram').hover( function(){
