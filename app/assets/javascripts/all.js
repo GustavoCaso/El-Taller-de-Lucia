@@ -11,7 +11,9 @@ $(document).ready(function(){
     skinsPath: 'assets/skins/',
     skin: 'glass',
     navPrevNext: true,
-    navButtons: true
+    navButtons: true,
+    hoverBottomNav : true,
+    thumbnailNavigation: 'disabled'
   });
 
   $('.facebook, .instagram').hover( function(){
