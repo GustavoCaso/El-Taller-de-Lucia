@@ -43,6 +43,6 @@ private
   end
 
   def newsletter_params
-    params.require(:newsletter).permit(:title, :text, :url)
+    params.require(:newsletter).permit(:title, :text, :url, :foto)
   end
 end
