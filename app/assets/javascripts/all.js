@@ -10,7 +10,7 @@ $(document).ready(function(){
   $("#layerslider").layerSlider({
     skinsPath: 'assets/skins/',
     skin: 'glass',
-    navPrevNext: true,
+    navPrevNext: false,
     navButtons: true,
     hoverBottomNav : true,
     thumbnailNavigation: 'disabled'

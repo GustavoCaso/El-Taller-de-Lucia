@@ -9,5 +9,8 @@
   .field
     = f.label :url, "Dirección web"
     = f.text_field :url
+  .field
+    = f.label :foto, 'Foto'
+    = f.file_field :foto
   .actions
     = f.submit "Guardar"
