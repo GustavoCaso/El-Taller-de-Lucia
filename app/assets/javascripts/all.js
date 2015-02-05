@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 
   $("#layerslider").layerSlider({
-    skinsPath: 'assets/skins/',
+    skinsPath: 'assets/stylesheets/',
     skin: 'glass',
     navPrevNext: false,
     navButtons: true,
