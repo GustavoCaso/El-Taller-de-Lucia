@@ -48,7 +48,12 @@ class PicturesController < ApplicationController
     end
   end
 
-private
+  def destroy
+    @picture.delete
+    redirect_to pictures_path, notice: "Foto borrada correctamente"
+  end
+
+  private
 
   def set_picture
     @picture = Picture.find(params[:id])
