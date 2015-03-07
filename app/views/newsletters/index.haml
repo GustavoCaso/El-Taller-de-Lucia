@@ -17,7 +17,6 @@
             %td= newsletter.title
             %td= newsletter.text
             %td= image_tag newsletter.foto.url(:thumb) if newsletter.foto?
-            %td= link_to 'Ver', newsletter_path(newsletter)
             %td= link_to 'Editar', edit_newsletter_path(newsletter)
             %td= link_to "Borrar", newsletter_path(newsletter), method: :delete, data: {confirm: "Estas segura de queres borralo"}
 
