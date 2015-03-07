@@ -13,6 +13,7 @@
           %th Foto
           %th Visible
           %th
+          %th
 
         - @pictures.each do |picture|
           %tr
@@ -22,6 +23,7 @@
             %td= image_tag picture.foto.url(:thumb)
             %td= picture.show
             %td= link_to 'Editar', edit_picture_path(picture)
+            %td= link_to 'Borrar', picture_path(picture),method: :delete, data:{confirm: 'Seguro que quieres borrar la foto ?'}
 
 
       %br
