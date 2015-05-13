@@ -5,6 +5,14 @@
     .col-xs-12
       %h1 Listado de Fotos
 
+      = link_to 'Nueva Foto', new_picture_path
+
+      %h2 Filtrar fotos por categoría
+      %ul.pictures-filter.clearfix
+        - Picture::CATEGORIES.each do |category|
+          %li
+            = link_to category, pictures_path(category: category)
+
       %table.table
         %tr
           %th Titulo
@@ -15,17 +23,15 @@
           %th
           %th
 
-        - @pictures.each do |picture|
-          %tr
-            %td= picture.title
-            %td= picture.description
-            %td= picture.category
-            %td= image_tag picture.foto.url(:thumb)
-            %td= picture.show
-            %td= link_to 'Editar', edit_picture_path(picture)
-            %td= link_to 'Borrar', picture_path(picture),method: :delete, data:{confirm: 'Seguro que quieres borrar la foto ?'}
+        - @pictures.each do |_, group|
+          - group.each do |picture|
+            %tr
+              %td= picture.title
+              %td= picture.description
+              %td= picture.category
+              %td= image_tag picture.foto.url(:thumb)
+              %td= picture.show
+              %td= link_to 'Editar', edit_picture_path(picture)
+              %td= link_to 'Borrar', picture_path(picture),method: :delete, data:{confirm: 'Seguro que quieres borrar la foto ?'}
 
 
-      %br
-
-    = link_to 'Nueva Foto', new_picture_path

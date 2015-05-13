@@ -20,7 +20,11 @@ class PicturesController < ApplicationController
   end
 
   def index
-    @pictures = Picture.all
+    if params[:category]
+      @pictures = Picture.where(category: params[:category])
+    else
+      @pictures = Picture.all.group_by(&:category)
+    end
   end
 
   def new
